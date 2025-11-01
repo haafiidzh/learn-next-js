@@ -1,6 +1,11 @@
 import React from "react";
+import './globals.css'
+import { inter } from "./ui/fonts";
+interface Props {
+  children: React.ReactNode
+}
 
-const Layout = ({ children }) => {
+const RootLayout = ({ children } : Props) => {
   return (
     <html lang="en">
       <head>
@@ -8,9 +13,11 @@ const Layout = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
       </head>
-      <body>{children}</body>
+      <body className={`${inter.className} antialiased`} >
+        {children}
+      </body>
     </html>
   );
 };
 
-export default Layout;
+export default RootLayout;
