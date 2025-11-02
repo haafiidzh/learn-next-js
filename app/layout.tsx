@@ -1,11 +1,11 @@
 import React from "react";
-import './globals.css'
+import "./globals.css";
 import { inter } from "./ui/fonts";
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const RootLayout = ({ children } : Props) => {
+const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en">
       <head>
@@ -13,7 +13,8 @@ const RootLayout = ({ children } : Props) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
       </head>
-      <body className={`${inter.className} antialiased`} >
+      <body className={`${inter.className} antialiased`}>
+        {/* <Header/> */}
         {children}
       </body>
     </html>
